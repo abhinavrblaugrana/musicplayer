@@ -16,8 +16,6 @@ body{
     padding: 30px;
     border-radius: 20px;
     box-shadow:rgba(0,0,0,0.3) 0px 19px 38px, rgba(0, 0, 0,0.22) 0px 15px 12px;
-    
-
 }
 .details{
     display:flex;
@@ -26,15 +24,14 @@ body{
     justify-content: center;
 }
 .track-art {
-  margin: 25px auto;
-  height: 250px;
-  width: 250px;
-  border: 2px solid rgb(49, 49, 49);
-  background-size: cover;
-  background-position: center;
-  border-radius: 0;   
-  box-shadow: 0px 10px 16px rgba(0,0,0,0.25);
-
+    margin: 25px auto;
+    height: 250px;
+    width: 250px;
+    border: 2px solid rgb(49, 49, 49);
+    background-size: cover;
+    background-position: center;
+    border-radius: 0;   
+    box-shadow: 0px 10px 16px rgba(0,0,0,0.25);
 }
 
 .now-playing{
@@ -54,39 +51,44 @@ body{
     align-items: center;
     margin-bottom: 30px;
     color: rgb(207, 207, 207);
+    cursor: default;
 }
 .playpause-track{
     color: rgb(245, 245, 246);
 }
 
 .repeat-track:active,
-    .playpause-track:active,
-    .prev-track:active,
-    .next-track:active {
+.playpause-track:active,
+.prev-track:active,
+.next-track:active,
+.random-track:active { 
     color: rgb(105, 104, 104);
-    }
+}
+
+.random-track i.fa-random {
+    color: rgb(207, 207, 207) !important; 
+}
 
 .repeat-track,
-    .random-track,
-    .playpause-track,
-    .prev-track,
-    .next-track {
-    padding: 25px;
+.random-track,
+.playpause-track,
+.prev-track,
+.next-track {
+    padding: 15px;
     opacity: 1.0;
     transition: opacity .2s;
-    }
-.random-track{
-    color:rgb(105, 104, 104); 
+}
+
+.random-track i {
+    color: rgb(207, 207, 207);
 }
 
 .repeat-track:hover,
-    .playpause-track:hover,
-    .prev-track:hover,
-    .next-track:hover {
+.playpause-track:hover,
+.prev-track:hover,
+.next-track:hover,
+.random-track:hover {
     opacity: 0.8;
-    cursor: pointer;
-    }
-.random-track:hover{
     cursor: pointer;
 }
 
@@ -94,6 +96,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 15px 0; 
 }
 
 .seek-slider,
@@ -108,23 +111,23 @@ body{
 
 .seek-slider::-webkit-slider-thumb,
 .volume-slider::-webkit-slider-thumb {
-  appearance: none;
-  width: 15px;
-  height: 15px;
-  background: white ;
-  border: 3px solid rgb(71, 70, 70);
-  cursor: pointer;
-  border-radius: 50%;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white ;
+    border: 3px solid rgb(71, 70, 70);
+    cursor: pointer;
+    border-radius: 50%;
 }
 
 .seek-slider::-moz-range-thumb,
 .volume-slider::-moz-range-thumb {
-  width: 15px;
-  height: 15px;
-  background: white;
-  border: 3px solid #3774FF;
-  cursor: pointer;
-  border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 3px solid #3774FF;
+    cursor: pointer;
+    border-radius: 50%;
 }
 
 .seek-slider:hover,
@@ -133,11 +136,13 @@ opacity: 1.0;
 }
     
 .seek-slider {
-width: 60%;
+    width: 60%;
 }
     
-.volumeslider {
-width: 30%;
+.volume-slider {
+    width: 20%;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 .current-time,
@@ -147,10 +152,9 @@ width: 30%;
 
 i.fa-volume-down,
 i.fa-volume-up{
-    padding:10px;
+    padding:5px;
 }
 
-.randomActive{
+.randomActive i {
     color: white;
 }
-
